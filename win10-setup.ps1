@@ -41,5 +41,3 @@ Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
 #if ($env:computername -ne $computername) {
 #	Rename-Computer -NewName $computername
 #}
-
-Invoke-Reboot
