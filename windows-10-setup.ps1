@@ -1,4 +1,7 @@
 # Author: Justin Trusty (sourced from multiple gists and blogs)
+# https://github.com/Microsoft/windows-dev-box-setup-scripts
+# https://github.com/felixrieseberg/windows-development-environment
+# https://gist.github.com/NickCraver/7ebf9efbfd0c3eab72e9
 
 # Test-Admin is not available yet, so use...
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
