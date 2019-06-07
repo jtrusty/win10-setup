@@ -8,9 +8,6 @@ $bstrappackage = "-bootstrapPackage"
 
 $helperUri = $Boxstarter['ScriptToCall']
 $strpos = $helperUri.IndexOf($bstrappackage)
-
-write-host $strpos
-
 $helperUri = $helperUri.Substring($strpos + $bstrappackage.Length)
 $helperUri = $helperUri.TrimStart("'", " ")
 $helperUri = $helperUri.TrimEnd("'", " ")
