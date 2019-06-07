@@ -36,10 +36,3 @@ write-host "Installing/Upgrading Boxstarter" -ForegroundColor "Yellow"
 # Install Boxstarter: http://boxstarter.org/InstallBoxstarter
 choco upgrade boxstarter
 choco upgrade Boxstarter.chocolatey
-
-Import-Module Boxstarter.Chocolatey
-
-write-host "Running Boxstarter" -ForegroundColor "Yellow"
-
-New-PackageFromScript -Source https://raw.githubusercontent.com/jtrusty/win10-setup/master/boxstarter.ps1 -PackageName Win10Setup
-Install-BoxstarterPackage -Package Win10Setup
