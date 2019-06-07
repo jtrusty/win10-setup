@@ -38,5 +38,5 @@ Import-Module Boxstarter.Chocolatey
 
 write-host "Running Boxstarter" -ForegroundColor "Yellow"
 
-New-PackageFromScript -Source boxstarter.ps1 -PackageName Win10Setup
+New-PackageFromScript -Source https://raw.githubusercontent.com/jtrusty/win10-setup/master/boxstarter.ps1 -PackageName Win10Setup
 Install-BoxstarterPackage -Package Win10Setup
