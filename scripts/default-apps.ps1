@@ -16,3 +16,6 @@ choco upgrade cpu-z
 
 # Music
 choco upgrade spotify
+
+# Gaming
+choco upgrade steam
