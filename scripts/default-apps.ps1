@@ -13,9 +13,17 @@ choco upgrade windirstat
 
 # Performance
 choco upgrade cpu-z
+choco upgrade gpu-z
 
 # Music
 choco upgrade spotify
 
 # Gaming
 choco upgrade steam
+choco upgrade uplay
+choco upgrade epicgameslauncher
+choco upgrade geforce-game-ready-driver
+choco upgrade geforce-experience
+
+# Office
+choco upgrade office365homepremium
