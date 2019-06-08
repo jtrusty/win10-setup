@@ -34,5 +34,6 @@ choco feature enable -n allowGlobalConfirmation
 write-host "Installing/Upgrading Boxstarter" -ForegroundColor "Yellow"
 
 # Install Boxstarter: http://boxstarter.org/InstallBoxstarter
-choco upgrade boxstarter
-choco upgrade Boxstarter.chocolatey
+. { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
+
+Install-BoxstarterPackage -PackgeName https://raw.githubusercontent.com/jtrusty/win10-setup/master/win10-setup.ps1 -DisableReboots
