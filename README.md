@@ -1,6 +1,8 @@
 # win10-setup
 Windows 10 Configuration Scripts
 
+Be sure you are running Win10 Pro or higher.
+
 Run the prerequisites first, then click the link below.
 
 |Click link to run  |Description  |
