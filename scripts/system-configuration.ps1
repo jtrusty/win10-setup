@@ -4,9 +4,8 @@ Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelU
 RefreshEnv
 
 # Enable Windows Features...
-Enable-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online -NoRestart
-Enable-WindowsOptionalFeature -FeatureName Containers -Online -NoRestart
-Enable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Subsystem-Linux -Online -NoRestart
+choco upgrade Microsoft-Hyper-V-All -source windowsFeatures
+choco upgrade Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
 # Change taskbar
 Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
