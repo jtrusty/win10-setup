@@ -36,6 +36,3 @@ write-host "Installing/Upgrading Boxstarter" -ForegroundColor "Yellow"
 # Install Boxstarter: http://boxstarter.org/InstallBoxstarter
 choco upgrade boxstarter
 choco upgrade Boxstarter.chocolatey
-
-#Change the key to Windows 10 Pro
-slmgr -ipk KTT9W-JFN49-JVDGC-YKTWW-4VV26
