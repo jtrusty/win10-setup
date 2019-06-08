@@ -47,7 +47,7 @@ function executeScript {
 #--- Setting up Windows ---
 executeScript "system-configuration.ps1";
 executeScript "file-explorer-settings.ps1";
-executeScript "remove-default-apps.ps1";
+executeScript "remove-builtin-apps.ps1";
 executeScript "developer-tools.ps1";
 executeScript "default-apps.ps1";
 
