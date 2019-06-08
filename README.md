@@ -3,7 +3,7 @@ Windows 10 Configuration Scripts
 
 Be sure you are running Win10 Pro or higher.
 
-Run the prerequisites first, then click the link below.
+You can either run the prerequisites first which will install everything from scratch, or if you are just need to update and the automatic web launcher is still active you can click the link below.
 
 |Click link to run  |Description  |
 |---------|---------|
