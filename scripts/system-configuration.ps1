@@ -11,9 +11,6 @@ choco upgrade Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
 Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -AlwaysShowIconsOn
 
-# Enable remote desktop
-Enable-RemoteDesktop
-
 # Change the powershell execution policy
 Update-ExecutionPolicy RemoteSigned
 
