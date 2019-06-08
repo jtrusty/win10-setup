@@ -1,12 +1,5 @@
 # Description: Boxstarter Script for Windows 10
 
-#--- Rename the Computer ---
-# Requires restart, or add the -Restart flag
-$computername = "gaming-laptop"
-if ($env:computername -ne $computername) {
-	Rename-Computer -NewName $computername
-}
-
 # Check for pending reboot and if exists clear it.
 function Clear-Known-Pending-Renames($ignoredRenames){
     $regKey = "HKLM:SYSTEM\CurrentControlSet\Control\Session Manager\"
@@ -28,6 +21,13 @@ function Clear-Known-Pending-Renames($ignoredRenames){
         Set-ItemProperty -Path $regKey -Name $regProperty -Value ([string]::Join([Environment]::NewLine, $output))
         Write-BoxstarterMessage "Updated pending reboot $(Get-PendingReboot | Out-String)"
     }
+}
+
+#--- Rename the Computer ---
+# Requires restart, or add the -Restart flag
+$computername = "gaming-laptop"
+if ($env:computername -ne $computername) {
+	Rename-Computer -NewName $computername
 }
 
 # Begin running install & configuration scripts
