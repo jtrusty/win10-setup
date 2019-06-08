@@ -57,6 +57,7 @@ executeScript "file-explorer-settings.ps1";
 executeScript "remove-builtin-apps.ps1";
 executeScript "developer-tools.ps1";
 executeScript "default-apps.ps1";
+executeScript "misc-stuff.ps1";
 
 write-host "Scripts installed" -ForegroundColor "Yellow"
 Enable-UAC
