@@ -4,8 +4,8 @@ Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelU
 RefreshEnv
 
 # Enable Windows Features...
-choco upgrade Microsoft-Hyper-V-All -source windowsFeatures
-choco upgrade Microsoft-Windows-Subsystem-Linux -source windowsfeatures
+choco install Microsoft-Hyper-V-All -source windowsFeatures
+choco install Microsoft-Windows-Subsystem-Linux -source windowsfeatures
 
 # Change taskbar
 Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
