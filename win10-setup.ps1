@@ -1,5 +1,24 @@
 # Description: Boxstarter Script for Windows 10
 
+# Boxstarter options
+$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.NoPassword=$false # Is this a machine with no login password?
+$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+
+# From a Administrator PowerShell, if Get-ExecutionPolicy returns Restricted, run:
+if ((Get-ExecutionPolicy) -eq "Restricted") {
+    Set-ExecutionPolicy Unrestricted -Force
+}
+
+#Set ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Enable-RemoteDesktop
+Disable-InternetExplorerESC
+Set-StartScreenOptions -EnableBootToDesktop
+
+# Update Windows and reboot if necessary
+Install-WindowsUpdate -AcceptEula
+if (Test-PendingReboot) { Invoke-Reboot }
+
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
 $computername = "gaming-laptop"
