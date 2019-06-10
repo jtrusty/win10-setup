@@ -27,19 +27,26 @@ $Boxstarter.RebootOk=$true # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
+# Basic setup
+
 # From a Administrator PowerShell, if Get-ExecutionPolicy returns Restricted, run:
 if ((Get-ExecutionPolicy) -eq "Restricted") {
     Set-ExecutionPolicy Unrestricted -Force
 }
 
-#Set ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
 Disable-InternetExplorerESC
-Set-StartScreenOptions -EnableBootToDesktop
+Disable-UAC
+Set-TaskbarSmall
 
-# Update Windows and reboot if necessary
-Install-WindowsUpdate -AcceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
+
+write-host "Starting Windows Updates" -ForegroundColor "Yellow"
+Enable-MicrosoftUpdate
+Install-WindowsUpdate -AcceptEula -GetUpdatesFromMS
+if (Test-PendingReboot) { Invoke-Reboot }
+
+Set-StartScreenOptions -EnableBootToDesktop
 
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
@@ -47,9 +54,6 @@ $computername = "gaming-laptop"
 if ($env:computername -ne $computername) {
 	Rename-Computer -NewName $computername
 }
-
-# Begin running install & configuration scripts
-Disable-UAC
 
 # Get the base URI path from the ScriptToCall value
 $bstrappackage = "-bootstrapPackage"
@@ -78,8 +82,5 @@ executeScript "default-apps.ps1";
 executeScript "misc-stuff.ps1";
 
 write-host "Scripts installed" -ForegroundColor "Yellow"
-Enable-UAC
 
-write-host "Starting Windows Updates" -ForegroundColor "Yellow"
-Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
+Enable-UAC
