@@ -1,28 +1,5 @@
 # Description: Boxstarter Script for Windows 10
 
-# Check for pending reboot and if exists clear it.
-function Clear-Known-Pending-Renames($ignoredRenames){
-    $regKey = "HKLM:SYSTEM\CurrentControlSet\Control\Session Manager\"
-    $regProperty = "PendingFileRenameOperations"
-    $pendingReboot = Get-PendingReboot
- 
-    Write-BoxstarterMessage "Current pending reboot $($pendingReboot | Out-String)"
-    
-    if($pendingReboot.PendFileRename){
- 
-        $output = $pendingReboot.PendFileRenVal | %{$_ -split [Environment]::NewLine} | ? { 
-            $current = $_
-            ![string]::IsNullOrWhiteSpace($current) -and ($ignoredRenames | ? { $current.StartsWith($_)  } ).Length -eq 0 } | Get-Unique
- 
-        if($output -eq $null){
-            $output = @()
-        }
-        
-        Set-ItemProperty -Path $regKey -Name $regProperty -Value ([string]::Join([Environment]::NewLine, $output))
-        Write-BoxstarterMessage "Updated pending reboot $(Get-PendingReboot | Out-String)"
-    }
-}
-
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
 $computername = "gaming-laptop"
