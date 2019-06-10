@@ -30,4 +30,4 @@ write-host "Installing/Upgrading Boxstarter" -ForegroundColor "Yellow"
 # Install Boxstarter: http://boxstarter.org/InstallBoxstarter
 . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
 
-Install-BoxstarterPackage -PackgeName https://raw.githubusercontent.com/jtrusty/win10-setup/master/win10-setup.ps1 -DisableReboots
+Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/jtrusty/win10-setup/master/win10-setup.ps1 -DisableReboots
