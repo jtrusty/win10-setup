@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -115,12 +114,6 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jtrusty/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jtrusty/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jtrusty/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jtrusty/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-=======
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -174,21 +167,6 @@ alias lh='ls -a | egrep "^\."'
 # make some commands (potentially) less destructive
 # -------------------------------------------------------------------
 alias 'rm=rm -i'
-
-# -------------------------------------------------------------------
-# Jboss
-# -------------------------------------------------------------------
-alias 'startjboss=/usr/local/jboss-4.0.5.GA/bin/run.sh &'
-alias 'stopjboss=/usr/local/jboss-4.0.5.GA/bin/shutdown.sh --shutdown'
-
-# -------------------------------------------------------------------
-# Mercurial (hg)
-# -------------------------------------------------------------------
-alias 'h=hg status'
-alias 'hc=hg commit'
-alias 'push=hg push'
-alias 'pull=hg pull'
-alias 'clone=hg clone'
 
 # -------------------------------------------------------------------
 # Git
@@ -264,4 +242,3 @@ i() { cd "$(cat ~/.save_dir)" ; }
 #
 # finis
 # mhn 2011.7.19
->>>>>>> master
