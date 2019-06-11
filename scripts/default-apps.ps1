@@ -24,7 +24,7 @@ choco upgrade uplay
 choco upgrade epicgameslauncher
 choco upgrade geforce-game-ready-driver
 choco upgrade geforce-experience
-choco upgrade battle.net
+choco upgrade battle.net --allow-empty-checksums
 
 # Office
 choco upgrade office365homepremium
