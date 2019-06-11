@@ -27,4 +27,4 @@ choco upgrade geforce-experience
 choco upgrade battle.net --allow-empty-checksums
 
 # Office
-choco upgrade office365homepremium
+choco upgrade office365proplus
