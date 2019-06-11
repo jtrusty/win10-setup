@@ -37,7 +37,7 @@ if ((Get-ExecutionPolicy) -eq "Restricted") {
 Enable-RemoteDesktop
 Disable-InternetExplorerESC
 Disable-UAC
-Set-TaskbarSmall
+Set-TaskbarOptions -Size Small -Lock -Combine Never
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
