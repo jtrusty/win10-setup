@@ -23,7 +23,7 @@ function Clear-Known-Pending-Renames($ignoredRenames){
 }
 
 # Boxstarter options
-$Boxstarter.RebootOk=$false # Allow reboots?
+$Boxstarter.RebootOk=$true # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
