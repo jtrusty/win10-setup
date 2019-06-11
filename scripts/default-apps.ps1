@@ -24,6 +24,7 @@ choco upgrade uplay
 choco upgrade epicgameslauncher
 choco upgrade geforce-game-ready-driver
 choco upgrade geforce-experience
+choco upgrade battle.net
 
 # Office
 choco upgrade office365homepremium

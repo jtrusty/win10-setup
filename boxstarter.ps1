@@ -23,7 +23,7 @@ function Clear-Known-Pending-Renames($ignoredRenames){
 }
 
 # Boxstarter options
-$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.RebootOk=$false # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
@@ -37,7 +37,7 @@ if ((Get-ExecutionPolicy) -eq "Restricted") {
 Enable-RemoteDesktop
 Disable-InternetExplorerESC
 Disable-UAC
-Set-TaskbarSmall
+Set-TaskbarOptions -Size Small -Lock -Combine Never
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
