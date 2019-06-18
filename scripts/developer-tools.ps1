@@ -2,6 +2,7 @@
 choco upgrade git.install --params="/WindowsTerminal /NoShellIntegration /GitAndUnixToolsOnPath"
 choco upgrade nodejs
 choco upgrade docker-desktop
+choco upgrade postman
 
 # Development Tools - Visual Studio Code
 choco upgrade visualstudiocode
