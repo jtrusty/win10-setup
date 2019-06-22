@@ -1,6 +1,8 @@
 # Common Development Tools
 choco upgrade git.install --params="/WindowsTerminal /NoShellIntegration /GitAndUnixToolsOnPath"
 choco upgrade nodejs
+choco upgrade python --version 2.7.2
+choco upgrade python
 choco upgrade docker-desktop
 choco upgrade postman
 
