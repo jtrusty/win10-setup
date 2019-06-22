@@ -5,6 +5,7 @@ choco upgrade python --version 2.7.2
 choco upgrade python
 choco upgrade docker-desktop
 choco upgrade postman
+choco upgrade dotnetcore-sdk
 
 # Development Tools - Visual Studio Code
 choco upgrade visualstudiocode
